@@ -1,0 +1,23 @@
+# depslib dependency file v1.0
+1644922093 source:/home/etu/p2018561/LIFAP4/TP1/LIFAP4_TD/Image.cpp
+	"Image.h"
+	<stdlib.h>
+	<iostream>
+	<cassert>
+
+1644922866 /home/etu/p2018561/LIFAP4/TP1/LIFAP4_TD/Image.h
+	"Pixel.h"
+	<string>
+
+1644921522 /home/etu/p2018561/LIFAP4/TP1/LIFAP4_TD/Pixel.h
+
+1644916106 source:/home/etu/p2018561/LIFAP4/TP1/LIFAP4_TD/main.cpp
+	<iostream>
+	"Image.h"
+	<stdlib.h>
+
+1644921584 source:/home/etu/p2018561/LIFAP4/TP1/LIFAP4_TD/Pixel.cpp
+	"Pixel.h"
+	<stdlib.h>
+	<iostream>
+
