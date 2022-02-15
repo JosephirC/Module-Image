@@ -1,56 +1,35 @@
-#include "Pixel.h"
-#include <iostream>
 
-using namespace std;
+class Pixel{
 
-Pixel::Pixel()
-{
-    r=0;
-    g=0;
-    b=0;
-    cout<<"pix"<<endl;
-}
+ private :
 
-Pixel::Pixel(const int nr, const int ng, const int nb)
-{
-    r=nr;
-    g=ng;
-    b=nb;
-    cout<<"pixel"<<endl;
-}
+   int r,g,b; /**< @param les composantes du pixel, unsigned char en C++*/
 
-int Pixel::getRouge ()const
-{
-    return r;
-}
+ public :
 
-int Pixel::getVert ()const
-{
-    return g;
-}
+   /**< @brief  Constructeur par défaut de la classe: initialise le pixel à  la couleur noire*/
+    Pixel();
 
-int Pixel::getBleu ()const
-{
-    return b;
-}
+   /**< @brief  Constructeur de la classe: initialise r,g,b avec les paramètres*/
+    Pixel(int nr, int ng, int nb);
 
-void Pixel::setRouge (int nr)
-{
-    r=nr;
-}
+   /**< @brief  Accesseur : récupère la composante rouge du pixel*/
+    int getRouge ()const; /**< @param  entier*/
 
-void Pixel::setVert (int ng)
-{
-    g=ng;
-}
+   /**< @brief  Accesseur : récupère la composante verte du pixel*/
+    int getVert ()const; /**< @param entier*/
 
-void Pixel::setBleu (int nb)
-{
-    b=nb;
-}
+   /**< @brief  Accesseur : récupère la composante bleue du pixel*/
+    int getBleu ()const; /**< @param entier*/
 
+   /**< @brief  Mutateur : modifie la composante rouge du pixel*/
+    void setRouge (int nr);
 
+   /**< @brief  Mutateur : modifie la composante verte du pixel*/
+    void setVert (int ng);
 
+   /**< @brief  Mutateur : modifie la composante bleue du pixel*/
+    void setBleu (int nb);
 
-
+};
 
