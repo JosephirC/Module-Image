@@ -66,8 +66,7 @@ void Image::testRegression(){
 }
 
 void Image::sauver(const string & filename) const {
-    ofstream fichier;
-    fichier.open(filename.c_str());
+    ofstream fichier (filename.c_str());
     assert(fichier.is_open());
     fichier << "P3" << endl;
     fichier << dimx << " " << dimy << endl;
@@ -81,7 +80,7 @@ void Image::sauver(const string & filename) const {
     fichier.close();
 }
 
-/*void Image::ouvrir(const string & filename) {
+void Image::ouvrir(const string & filename) {
     ifstream fichier (filename.c_str());
     assert(fichier.is_open());
 	char r,g,b;
@@ -102,7 +101,7 @@ void Image::sauver(const string & filename) const {
     cout << "Lecture de l'image " << filename << " ... OK\n";
 }
 
-void Image::afficherConsole(){
+/*void Image::afficherConsole(){
     cout << dimx << " " << dimy << endl;
     for(unsigned int y=0; y<dimy; ++y) {
         for(unsigned int x=0; x<dimx; ++x) {
