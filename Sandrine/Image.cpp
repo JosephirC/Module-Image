@@ -4,7 +4,9 @@
 #include <string>
 #include <fstream>
 #include <iostream>
-#include <./LIFAP4/LIFAP4_TD/SDL2_image-2.0.5/i686-w64-mingw32/include/SDL2/SDL_image.h>
+
+#include <SDL.h>
+#include <SDL_image.h>
 
 using namespace std;
 
@@ -77,6 +79,7 @@ void Image::testRegression ()
     cout<<"regression"<<endl;
 }
 
+/*
 void Image::sauver(const string & filename) const {
     ofstream fichier (filename.c_str());
     assert(fichier.is_open());
@@ -113,21 +116,21 @@ void Image::ouvrir(const string & filename) {
     cout << "Lecture de l'image " << filename << " ... OK\n";
 }
 
-/*void Image::afficherConsole(){
+void Image::afficherConsole(){
     cout << dimx << " " << dimy << endl;
     for(unsigned int y=0; y<dimy; ++y) {
         for(unsigned int x=0; x<dimx; ++x) {
-            Pixel& pix = getPix(x,y);
+            Pixel pix = getPix(x,y);
             cout << +pix.getRouge() << " " << +pix.getVert() << " " << +pix.getBleu() << " ";
         }
         cout << endl;
     }
-}*/
+}
+*/
 
-
-void Image::afficherInit();
+void Image::afficherInit()
 {
-    if(SDL_Init(SDL_Init_Video)<0)
+    if(SDL_Init(SDL_INIT_VIDEO)<0)
     {
         cout<<"Erreur pendant l'initialisation de la SDL : "<<SDL_GetError()<<endl;
         SDL_Quit();
@@ -135,7 +138,7 @@ void Image::afficherInit();
     }
 
        /**< @brief Création de la fenêtre*/
-       window=SDL_CreateWindow("image", SDL_WindowPOS_CENTERED, SDL_WINDOWPOS_CENTERED, WINSIZE, WINSIZE, SDL_WINDOW_SHOWN);
+       window=SDL_CreateWindow("image", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, WINSIZE, WINSIZE, SDL_WINDOW_SHOWN);
        if(window==NULL)
        {
             cout<<"Erreur pendant la creation de la fenetre : " <<SDL_GetError()<<endl;
