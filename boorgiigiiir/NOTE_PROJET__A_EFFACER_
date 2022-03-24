@@ -1,0 +1,83 @@
+class menu
+
+class ingredients --> heritage (2 type de pains, 2 types de viandes) soda, jus d'orange, ketchup mayo, 
+
+class clients nbr de clients, patience, position client(x y ), struct tab (possede la commande du client)
+
+class temps (t1 donnee membre) lib time
+
+class argent
+
+class objectif 
+
+class txt
+
+class sdl
+
+class Jeu{ //(va contenir les fonctions/procedure d'affichage)
+    int niveau; 
+    temps;
+
+
+    30- (t2-t1) 
+    t1 : clock quand on execute le programme
+    t2 : quand on rentre au niveau
+
+}
+
+
+sdl tt, il faut convertir les nombre en chaine de caracteres
+
+
+
+
+au lieu de const int facile = 1  -> on fait des enumerations (des switch au lieu de if)
+REMARQUE : CA DOIT ETREMIS DANSLE MODULE JEU, 
+
+MODULE JEU DOIT CONTENIR LA CLASSE ET L'ENUM.
+
+
+
+
+nouvella classe recette
+
+Ingredients tab
+
+
+fichier .txt -> recette (nom de la commande) ingredients1; ingredients2; ...; prix; (chemin ver l'image associe); mot cle pour fin de recette
+
+fonction qui lit mon fichier txt de recette
+
+liste de tous les ingredients dans un fichier pour l'affichage
+
+
+
+
+///////////////////////////
+
+QUESTION 
+
+ PREMEIRQUWE QUESTION :::EST CE QU ON DOIT FAIRE DES CLASSES POUR LA POSTION D'AFFICHAGE INITIAL DE TOUT (EX BLOCK DE RECETTE, BLOCK DE CUISSON, BLOCK DE POS CLIENT, ETC)
+
+ DEUXIEME QUESTION :: SUR LES CONSTRUCTEURS 
+
+ QUESTION 3 ::: VOIR VEC2.H
+
+ QUESTON 4  :: INGREDIENT.H CUISSON ??? 
+
+ QUESTION 5 :: ON MET DANS L'UML TXT ET SDL ??? 
+
+ QUESTION 6 ::: le geant switch des niveaux se fait dans Jeu.cpp ou Menu.cpp
+
+ 
+
+
+/////////////////////
+faire uneclasse commande avec une donnee membre commande 
+
+classe vec2 useless
+
+faire une classe menu txt et classe menu sdl
+
+
+renomme la classe sdl en AffichageSdl et ajoute une classe MenuSdl et MenuTxt
